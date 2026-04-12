@@ -1,0 +1,146 @@
+// ── CSS Variables ──────────────────────────────────────────
+:root {
+  --gold: #c9a84c;
+  --gold-light: #e8c97a;
+  --dark: #0a0c0f;
+  --dark2: #111418;
+  --dark3: #181c22;
+  --border: rgba(201, 168, 76, 0.18);
+  --text: #e8e6e0;
+  --muted: #8a8880;
+  --white: #f5f3ee;
+}
+
+// ── Reset ──────────────────────────────────────────────────
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--dark);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+// ── Google Fonts ───────────────────────────────────────────
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+// ── Shared Utilities ───────────────────────────────────────
+.section-eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.1;
+  max-width: 600px;
+
+  em {
+    font-style: italic;
+    color: var(--gold);
+  }
+}
+
+.section-sub {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.75;
+  max-width: 520px;
+  margin-top: 16px;
+}
+
+.btn-primary {
+  background: var(--gold);
+  color: var(--dark);
+  font-weight: 600;
+  font-size: 14px;
+  padding: 14px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background: var(--gold-light);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 30px rgba(201, 168, 76, 0.25);
+  }
+}
+
+.btn-outline {
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: 14px;
+  padding: 14px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.2s;
+  background: transparent;
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+}
+
+.sebi-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(201, 168, 76, 0.08);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 16px;
+
+  strong {
+    color: var(--gold);
+  }
+}
+
+// ── Fade-up Animation ──────────────────────────────────────
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards;
+}
+
+.delay-1 { animation-delay: 0.15s; }
+.delay-2 { animation-delay: 0.3s; }
+.delay-3 { animation-delay: 0.45s; }
+.delay-4 { animation-delay: 0.6s; }
