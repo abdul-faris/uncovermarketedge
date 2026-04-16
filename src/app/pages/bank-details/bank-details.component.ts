@@ -253,8 +253,10 @@ interface UpiDetail {
     /* ── Account cards ────────────────────────────────────────── */
     .accounts-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
-      gap: 24px; margin-bottom: 48px;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 480px));
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 48px
     }
 
     .account-card {
@@ -401,31 +403,21 @@ export class BankDetailsComponent {
   copied = signal<string>('');
 
   bankAccounts: BankAccount[] = [
-    {
-      bank: 'HDFC Bank',
-      logo: '🏦',
-      color: '#1a6eb5',
-      holderName: 'MarketEdge Research Private Limited',
-      accountNumber: '***************',
-      ifsc: '*******',
-      branch: 'Rander Road, Surat',
-      accountType: 'Current Account'
-    },
-    {
-      bank: 'Axis Bank',
+   {
+      bank: 'Kodak Bank',
       logo: '🏛️',
       color: '#8b1a1a',
-      holderName: 'MarketEdge Research Private Limited',
-      accountNumber: '****************',
-      ifsc: '*******',
-      branch: 'Piplod, Surat',
+      holderName: 'DARPAN AGGARWAL KARTA',
+      accountNumber: '9650174842',
+      ifsc: 'KKBK0004601',
+      branch: 'DELHI-PEERAGARHI',
       accountType: 'Current Account'
     }
   ];
 
   upiDetails: UpiDetail[] = [
-    { label: 'Company UPI ID', id: 'marketedge@hdfcbank', app: 'HDFC' },
-    { label: 'Company UPI ID', id: 'marketedge@axisbank', app: 'Axis' },
+    { label: 'Company UPI ID', id: '9650174842um@kotak', app: 'Kodak' },
+
   ];
 
   copy(text: string): void {

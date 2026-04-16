@@ -9,8 +9,8 @@ import { CommonModule } from '@angular/common';
     <div class="topbar">
       <span>⚠ Investments in securities market are subject to market risks. Read all related documents carefully before investing.</span>
       <div class="topbar-links">
-        <a href="mailto:support@marketedge.com">support&#64;marketedge.com</a>
-        <a href="tel:+919999000001">+91 9999 000 001</a>
+        <a href="mailto:subscriber.edu@uncovermarkets.org">subscriber.edu&#64;uncovermarkets.org</a>
+        <a href="tel:+917827384962">+91 7827 384 962</a>
       </div>
     </div>
   `,

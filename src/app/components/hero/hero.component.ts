@@ -1,11 +1,13 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 import { SiteDataService } from '../../services/site-data.service';
+import { Router } from '@angular/router'; 
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule ,RouterLink],
   template: `
     <section class="hero">
       <div class="hero-bg"></div>
@@ -25,18 +27,10 @@ import { SiteDataService } from '../../services/site-data.service';
       </p>
 
       <div class="hero-actions fade-up delay-3">
-        <a href="/contact" class="btn-primary">Get Started →</a>
+        <a routerLink="/contact" (click)="navigateTo('/contact')" class="btn-primary">Get Started →</a>
         <a href="#services" class="btn-outline">Explore Services</a>
       </div>
 
-      <div class="hero-stats fade-up delay-4">
-        @for (stat of heroStats; track stat.label) {
-          <div class="stat">
-            <div class="stat-num">{{ stat.value }}</div>
-            <div class="stat-label">{{ stat.label }}</div>
-          </div>
-        }
-      </div>
     </section>
   `,
   styles: [`
@@ -159,5 +153,10 @@ import { SiteDataService } from '../../services/site-data.service';
 })
 export class HeroComponent {
   private siteData = inject(SiteDataService);
-  heroStats = this.siteData.heroStats;
+  private router =inject(Router);
+  navigateTo(link: string) {
+    this.router.navigateByUrl(link).then(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    })
+  }
 }

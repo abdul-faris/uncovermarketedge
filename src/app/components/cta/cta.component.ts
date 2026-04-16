@@ -1,10 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cta',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule , RouterLink],
   template: `
     <section class="cta-section">
       <div class="cta-bg"></div>
@@ -17,8 +19,8 @@ import { CommonModule } from '@angular/common';
           Contact our team of experts today and find the subscription plan that's right for you.
         </p>
         <div class="cta-actions">
-          <a href="/contact" class="btn-primary">Contact Us Today →</a>
-          <a href="/pricing" class="btn-outline">View Pricing</a>
+          <a routerLink="/contact" (click)="navigateTo('/contact')" class="btn-primary">Contact Us Today →</a>
+          <a routerLink="/pricing" (click)="navigateTo('/pricing')" class="btn-outline">View Pricing</a>
         </div>
       </div>
     </section>
@@ -72,4 +74,12 @@ import { CommonModule } from '@angular/common';
     }
   `]
 })
-export class CtaComponent {}
+export class CtaComponent {
+   private router = inject(Router);
+
+   navigateTo(link: string) {
+    this.router.navigateByUrl(link).then(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    })
+  }
+}

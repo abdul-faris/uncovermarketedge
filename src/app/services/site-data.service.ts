@@ -9,6 +9,7 @@ export class SiteDataService {
     { label: 'About Us', link: '/about' },
     {
       label: 'Services',
+      link: '/services/stock-cash',
       children: [
         { label: 'Stock Cash Subscription', link: '/services/stock-cash' },
         { label: 'Stock / Index Futures', link: '/services/futures' },
@@ -22,6 +23,7 @@ export class SiteDataService {
     },
     {
       label: 'Pricing',
+      link: '/pricing/regular',
       children: [
         { label: 'Regular', link: '/pricing/regular' },
         { label: 'Premium', link: '/pricing/premium' },
@@ -32,12 +34,6 @@ export class SiteDataService {
     { label: 'Bank Details', link: '/bank-details' },
   ];
 
-  heroStats: Stat[] = [
-    { value: '8+', label: 'Years of Experience' },
-    { value: '10K+', label: 'Active Clients' },
-    { value: 'SEBI', label: 'Registered Research Analyst' },
-    { value: '8', label: 'Subscription Services' },
-  ];
 
   services: Service[] = [
     {
@@ -215,8 +211,8 @@ export class SiteDataService {
   ];
 
   whyStats: Stat[] = [
-    { value: '10K+', label: 'Happy Clients' },
-    { value: '8+', label: 'Years Active' },
+    { value: '5K+', label: 'Happy Clients' },
+    { value: '2+', label: 'Years Active' },
     { value: '98%', label: 'Satisfaction Rate' },
     { value: '8', label: 'Service Categories' },
   ];
@@ -239,6 +235,7 @@ export class SiteDataService {
       title: 'Company',
       links: [
         { label: 'About Us', href: '/about' },
+        { label: 'Our Team', href: '/team' },
         { label: 'Mentorship Program', href: '/mentorship' },
         { label: 'Bank Details', href: '/bank-details' },
         { label: 'Complaint Board', href: '/complaint-board' },
@@ -251,7 +248,7 @@ export class SiteDataService {
       title: 'Legal',
       links: [
         { label: 'Privacy Policy', href: '/privacy' },
-        { label: 'Terms & Conditions', href: '/terms' },
+        { label: 'Terms & Conditions', href: '/terms-conditions' },
         { label: 'Refund Policy', href: '/refund' },
         { label: 'Disclaimer', href: '/disclaimer' },
         { label: 'Disclosure', href: '/disclosure' },

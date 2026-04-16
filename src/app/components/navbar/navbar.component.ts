@@ -10,13 +10,13 @@ import { NavItem } from '../../models/site.models';
   imports: [CommonModule, RouterLink],
   template: `
     <nav>
-      <a class="logo" routerLink="/">Market<span>Edge</span></a>
+      <a class="logo" routerLink="/">UncoverMarket<span>Edge</span></a>
 
       <ul class="nav-links">
         @for (item of navItems; track item.label) {
           <li [class.has-dropdown]="item.children?.length">
             @if (item.children?.length) {
-              <a href="#">{{ item.label }} ▾</a>
+              <a [routerLink]="item.link || null">{{ item.label }} ▾</a>
               <div class="dropdown">
                 @for (child of item.children; track child.label) {
                   <a [routerLink]="child.link">{{ child.label }}</a>
@@ -39,9 +39,9 @@ import { NavItem } from '../../models/site.models';
       @if (mobileOpen) {
         <div class="mobile-menu">
           @for (item of navItems; track item.label) {
-            <a [href]="item.link ?? '#'" (click)="mobileOpen = false">{{ item.label }}</a>
+            <a [routerLink]="item.link || null" (click)="mobileOpen = false">{{ item.label }}</a>
           }
-          <a href="/contact" class="mobile-cta" (click)="mobileOpen = false">Contact Us</a>
+          <a routerLink="/contact" class="mobile-cta" (click)="mobileOpen = false">Contact Us</a>
         </div>
       }
     </nav>
@@ -142,7 +142,7 @@ import { NavItem } from '../../models/site.models';
       }
     }
 
-    // Mobile
+    /*  Mobile */
     .mobile-toggle {
       display: none !important;
       flex-direction: column;

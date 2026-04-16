@@ -12,7 +12,7 @@ import { SiteDataService } from '../../services/site-data.service';
         <!-- Left: Text -->
         <div>
           <div class="section-eyebrow">About Us</div>
-          <h2 class="section-title">About <em>MarketEdge</em> Research</h2>
+          <h2 class="section-title">About <em>UncoverMarketEdge</em> Research</h2>
           <p class="section-sub">
             A market research and analysis company specialising in gathering and interpreting
             data about markets, consumers, competitors, and industry trends — helping businesses
@@ -24,7 +24,7 @@ import { SiteDataService } from '../../services/site-data.service';
           </p>
 
           <div class="disclaimer-box">
-            MarketEdge Research provides investment research and advisory services. The
+            UncoverMarketEdge Research provides investment research and advisory services. The
             information and recommendations are based on reliable sources and thorough analysis.
             Investments involve risk, and past performance is not indicative of future results.
             Clients are advised to consult with financial advisors before making investment
@@ -32,7 +32,7 @@ import { SiteDataService } from '../../services/site-data.service';
           </div>
 
           <div class="sebi-badge">
-            <strong>SEBI Reg:</strong> INH000000000 &nbsp;|&nbsp; BASL Member
+            <strong>SEBI Reg:</strong> INH000013299 &nbsp;|&nbsp; BASL Member
           </div>
         </div>
 

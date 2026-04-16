@@ -1,28 +1,30 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SiteDataService } from '../../services/site-data.service';
+import { RouterLink  } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   template: `
     <footer>
       <div class="footer-grid">
         <!-- Brand column -->
         <div class="footer-brand">
-          <div class="footer-logo">Market<span>Edge</span> Research</div>
+          <div class="footer-logo">UncoverMarket<span>Edge</span> Research</div>
           <p class="footer-desc">
             A SEBI-registered research analyst firm providing specialised market intelligence
             and subscription advisory services across equity, commodity, and derivatives markets.
           </p>
           <div class="footer-contact">
-            <div>📍 116 Fortune Mall, Pal Adajan Road, Surat, Gujarat — 395009</div>
-            <div><a href="mailto:support@marketedge.com">support&#64;marketedge.com</a></div>
-            <div><a href="tel:+919999000001">+91 9999 000 001</a></div>
+            <div>📍 Darpan Aggarwal, F-25/57 sector 3 rohini, Delhi 110085</div>
+            <div><a href="mailto:subscriber.edu@uncovermarkets.org">subscriber.edu&#64;uncovermarkets.org</a></div>
+            <div><a href="tel:+917827384962">+91 7827 384 962</a></div>
           </div>
           <div class="sebi-badge">
-            <strong>SEBI Reg.</strong> INH000000000 &nbsp;·&nbsp; BASL Member &nbsp;·&nbsp; NISM Certified
+            <strong>SEBI Reg.</strong> INH000013299 &nbsp;·&nbsp; BASL Member &nbsp;·&nbsp; NISM Certified
           </div>
         </div>
 
@@ -32,7 +34,7 @@ import { SiteDataService } from '../../services/site-data.service';
             <h4>{{ section.title }}</h4>
             <ul>
               @for (link of section.links; track link.label) {
-                <li><a [href]="link.href">{{ link.label }}</a></li>
+                <li><a [routerLink]="link.href" (click)="navigateTo(link.href)">{{ link.label }}</a></li>
               }
             </ul>
           </div>
@@ -40,7 +42,7 @@ import { SiteDataService } from '../../services/site-data.service';
       </div>
 
       <div class="footer-bottom">
-        <span>© 2026 MarketEdge Research Private Limited. All rights reserved.</span>
+        <span>© 2026 UncoverMarketEdge Research Private Limited. All rights reserved.</span>
         <span class="footer-disclaimer">
           Registration granted by SEBI and certification from NISM in no way guarantee
           performance of the intermediary or provide any assurance of returns to investors.
@@ -156,5 +158,12 @@ import { SiteDataService } from '../../services/site-data.service';
 })
 export class FooterComponent {
   private siteData = inject(SiteDataService);
+   private router = inject(Router);
   footerSections = this.siteData.footerSections;
+
+  navigateTo(link: string) {
+    this.router.navigateByUrl(link).then(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    })
+  }
 }

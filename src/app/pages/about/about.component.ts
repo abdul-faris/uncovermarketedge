@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { TopbarComponent } from '../../components/topbar/topbar.component';
 import { NavbarComponent } from '../../components/navbar/navbar.component';
 import { FooterComponent } from '../../components/footer/footer.component';
+import { Router } from '@angular/router';   
 
 @Component({
   selector: 'app-about',
@@ -19,7 +20,7 @@ import { FooterComponent } from '../../components/footer/footer.component';
           <div>
             <div class="eyebrow fade-up">ABOUT US</div>
             <h1 class="fade-up delay-1">
-              About <span>MarketEdge</span><br>Research
+              About <span>UncoverMarketEdge</span><br>Research
             </h1>
             <p class="hero-description fade-up delay-2">
               A market research and analysis company specialising in gathering and interpreting data about markets, 
@@ -67,7 +68,7 @@ import { FooterComponent } from '../../components/footer/footer.component';
         <div class="disclaimer-inner">
           <div class="disclaimer-box">
             <p>
-              <strong>MarketEdge Research</strong> provides investment research and advisory services. The information 
+              <strong>UncoverMarketEdge Research</strong> provides investment research and advisory services. The information 
               and recommendations are based on reliable sources and thorough analysis. Investments involve risk, and 
               past performance is not indicative of future results. Clients are advised to consult with financial 
               advisors before making investment decisions.
@@ -75,7 +76,7 @@ import { FooterComponent } from '../../components/footer/footer.component';
           </div>
 
           <div class="sebi-badge">
-            <strong>SEBI Reg:</strong> INH000000000 &nbsp;|&nbsp; BASL Member
+            <strong>SEBI Reg:</strong> INH000013299 &nbsp;|&nbsp; BASL Member
           </div>
         </div>
       </section>
@@ -84,8 +85,8 @@ import { FooterComponent } from '../../components/footer/footer.component';
       <section class="why-choose-us">
         <div class="why-inner">
           <div class="why-header">
-            <div class="eyebrow">Why MarketEdge</div>
-            <h2>Why Choose <span>MarketEdge</span></h2>
+            <div class="eyebrow">Why UncoverMarketEdge</div>
+            <h2>Why Choose <span>UncoverMarketEdge</span></h2>
           </div>
 
           <div class="why-grid">
@@ -134,8 +135,8 @@ import { FooterComponent } from '../../components/footer/footer.component';
           <h2>Ready to Start Your Investment Journey?</h2>
           <p>Explore our subscription plans and find the right fit for your trading and investment needs.</p>
           <div class="cta-buttons">
-            <a routerLink="/pricing" class="btn-primary">View Pricing →</a>
-            <a routerLink="/contact" class="btn-outline">Get In Touch</a>
+            <a routerLink="/pricing" (click)="navigateTo('/pricing')" class="btn-primary">View Pricing →</a>
+            <a routerLink="/contact" (click)="navigateTo('/contact')" class="btn-outline">Get In Touch</a>
           </div>
         </div>
       </section>
@@ -564,4 +565,13 @@ import { FooterComponent } from '../../components/footer/footer.component';
     }
   `]
 })
-export class AboutComponent {}
+export class AboutComponent {
+    private router = inject(Router);
+
+   navigateTo(link: string) {
+    this.router.navigateByUrl(link).then(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    })
+  }
+
+}

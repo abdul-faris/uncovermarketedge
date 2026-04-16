@@ -43,21 +43,21 @@ import emailjs from '@emailjs/browser';
                   <span class="info-icon">📍</span>
                   <div>
                     <div class="info-title">Address</div>
-                    <div class="info-val">116 Fortune Mall, Pal Adajan Road,<br>Surat, Gujarat — 395009</div>
+                    <div class="info-val">Darpan Aggarwal, F-25/57 sector 3 rohini,<br>Delhi 110085</div>
                   </div>
                 </div>
                 <div class="info-entry">
                   <span class="info-icon">📧</span>
                   <div>
                     <div class="info-title">Email</div>
-                    <a href="mailto:support@marketedge.com" class="info-link">support&#64;marketedge.com</a>
+                    <a href="mailto:subscriber.edu@uncovermarkets.org" class="info-link">subscriber.edu&#64;uncovermarkets.org</a>
                   </div>
                 </div>
                 <div class="info-entry">
                   <span class="info-icon">📞</span>
                   <div>
                     <div class="info-title">Phone</div>
-                    <a href="tel:+919999000001" class="info-link">+91 9999 000 001</a><br>
+                    <a href="tel:+917827384962" class="info-link">+91 7827 384 962</a><br>
                     <a href="tel:+919999000002" class="info-link">+91 9999 000 002</a>
                   </div>
                 </div>
@@ -72,7 +72,7 @@ import emailjs from '@emailjs/browser';
             </div>
 
             <div class="sebi-card">
-              <div class="sebi-row"><strong>SEBI Reg. No.</strong><span>INH000000000</span></div>
+              <div class="sebi-row"><strong>SEBI Reg. No.</strong><span>INH000013299</span></div>
               <div class="sebi-row"><strong>BASL Member</strong><span>Registered</span></div>
               <div class="sebi-row"><strong>NISM Certified</strong><span>Yes</span></div>
               <p class="sebi-note">
@@ -291,7 +291,7 @@ import emailjs from '@emailjs/browser';
       line-height: 1.75;
     }
 
-    // ── Body ───────────────────────────────────────────────────
+    /* ── Body ─────────────────────────────────────────────────── */
     .contact-body {
       padding: 80px 40px;
     }
@@ -650,7 +650,7 @@ import emailjs from '@emailjs/browser';
 
     @keyframes spin { to { transform: rotate(360deg); } }
 
-    // Success state
+    /* Success state */
     .success-state {
       text-align: center;
       padding: 60px 20px;
@@ -742,7 +742,7 @@ import emailjs from '@emailjs/browser';
     .delay-1 { animation-delay: 0.15s; }
     .delay-2 { animation-delay: 0.3s; }
 
-    // ── Responsive ─────────────────────────────────────────────
+    /* ── Responsive ───────────────────────────────────────────── */
     @media (max-width: 1024px) {
       .contact-inner { grid-template-columns: 1fr; }
       .contact-info { position: static; }
@@ -788,8 +788,8 @@ export class ContactComponent {
       a: 'Our team typically responds within one business day. For urgent queries, please call us directly on the numbers listed.'
     },
     {
-      q: 'Is MarketEdge Research registered with SEBI?',
-      a: 'Yes. MarketEdge Research is a SEBI-registered Research Analyst firm (Reg. No. INH000000000) and a member of BASL. Our analysts are NISM-certified.'
+      q: 'Is UncoverMarketEdge Research registered with SEBI?',
+      a: 'Yes. UncoverMarketEdge Research is a SEBI-registered Research Analyst firm (Reg. No. INH000013299) and a member of BASL. Our analysts are NISM-certified.'
     },
     {
       q: 'Can I switch between subscription plans after joining?',
@@ -840,10 +840,10 @@ onSubmit(): void {
     };
 
     emailjs.send(
-      'service_90kr8gp',     // 🔁 replace
-      'template_sd2yrw9',    // 🔁 replace
+      'service_90kr8gp',    
+      'template_sd2yrw9',   
       templateParams,
-      'KIH4S5AuE1lX5KL_7'       // 🔁 replace
+      'KIH4S5AuE1lX5KL_7'     
     ).then(
       () => {
         this.submitting.set(false);

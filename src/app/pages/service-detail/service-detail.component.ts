@@ -103,8 +103,7 @@ import { Service } from '../../models/site.models';
                 <div class="help-icon">📞</div>
                 <div class="sidebar-card-title">Need Help?</div>
                 <p class="help-text">Do you need assistance choosing the right plan? Please call us.</p>
-                <a href="tel:+919999000001" class="help-phone">+91 9999 000 001</a>
-                <a href="tel:+919999000002" class="help-phone">+91 9999 000 002</a>
+                <a href="tel:+917827384962" class="help-phone">+91 7827 384 962</a>
                 <a routerLink="/contact" class="btn-primary" style="margin-top: 20px; width: 100%; justify-content: center;">
                   Contact Us →
                 </a>
@@ -113,7 +112,7 @@ import { Service } from '../../models/site.models';
               <!-- SEBI badge -->
               <div class="sidebar-card sebi-sidebar">
                 <div class="sidebar-card-title">SEBI Details</div>
-                <div class="sebi-row-s"><strong>Reg. No.</strong><span>INH000000000</span></div>
+                <div class="sebi-row-s"><strong>Reg. No.</strong><span>INH000013299</span></div>
                 <div class="sebi-row-s"><strong>Type</strong><span>Research Analyst</span></div>
                 <div class="sebi-row-s"><strong>BASL</strong><span>Member</span></div>
                 <p class="sebi-note-s">
@@ -570,7 +569,7 @@ import { Service } from '../../models/site.models';
     .fade-up { opacity: 0; animation: fadeUp 0.6s ease forwards; }
     .delay-1 { animation-delay: 0.15s; }
 
-    // ── Responsive ─────────────────────────────────────────────
+    /* ── Responsive ───────────────────────────────────────────── */
     @media (max-width: 1024px) {
       .service-inner { grid-template-columns: 1fr; }
       .service-sidebar { position: static; }

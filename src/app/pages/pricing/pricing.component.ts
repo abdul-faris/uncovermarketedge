@@ -133,7 +133,7 @@ interface PricingTier {
                       </div>
                     </div>
 
-                    <button class="signup-btn" (click)="openModal(row)">
+                    <button  class="signup-btn" routerLink="/contact">
                       Enquire Now →
                     </button>
                   </div>
@@ -325,7 +325,7 @@ interface PricingTier {
       font-size: 16px; font-weight: 700; color: var(--white); line-height: 1.3;
     }
 
-    // Price table
+    /* Price table */
     .price-table {
       display: flex; align-items: stretch;
       background: var(--dark3);
@@ -349,7 +349,7 @@ interface PricingTier {
       width: 1px; background: var(--border); flex-shrink: 0;
     }
 
-    // Meta
+    /* Meta */
     .meta-list {
       display: flex; flex-direction: column; gap: 8px;
       margin-bottom: 24px;
@@ -467,7 +467,7 @@ interface PricingTier {
       text-align: center; line-height: 1.6;
     }
 
-    // ── Animations ────────────────────────────────────────────
+    /* ── Animations ──────────────────────────────────────────── */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(20px); }
       to   { opacity: 1; transform: translateY(0); }
