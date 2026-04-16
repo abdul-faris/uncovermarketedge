@@ -58,7 +58,6 @@ import emailjs from '@emailjs/browser';
                   <div>
                     <div class="info-title">Phone</div>
                     <a href="tel:+917827384962" class="info-link">+91 7827 384 962</a><br>
-                    <a href="tel:+919999000002" class="info-link">+91 9999 000 002</a>
                   </div>
                 </div>
                 <div class="info-entry">

@@ -4,6 +4,7 @@ import { RouterLink, ActivatedRoute } from '@angular/router';
 import { TopbarComponent } from '../../components/topbar/topbar.component';
 import { NavbarComponent } from '../../components/navbar/navbar.component';
 import { FooterComponent } from '../../components/footer/footer.component';
+import { Router } from '@angular/router';
 
 interface PricingRow {
   service: string;
@@ -133,7 +134,7 @@ interface PricingTier {
                       </div>
                     </div>
 
-                    <button  class="signup-btn" routerLink="/contact">
+                    <button (click)="navigateTo('/contact')" class="signup-btn" routerLink="/contact">
                       Enquire Now →
                     </button>
                   </div>
@@ -342,7 +343,6 @@ interface PricingTier {
       color: var(--muted); font-weight: 600; margin-bottom: 8px;
     }
     .price-val {
-      font-family: 'Playfair Display', serif;
       font-size: 17px; font-weight: 700; color: var(--gold);
     }
     .price-divider {
@@ -489,6 +489,7 @@ interface PricingTier {
 })
 export class PricingComponent implements OnInit {
   private route = inject(ActivatedRoute);
+  private router = inject(Router);
   activeTier = signal<string>('regular');
   modalService = signal<PricingRow | null>(null);
 
@@ -566,4 +567,11 @@ export class PricingComponent implements OnInit {
     this.modalService.set(null);
     document.body.style.overflow = '';
   }
+
+   navigateTo(link: string) {
+    this.router.navigateByUrl(link).then(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    })
+  }
+
 }

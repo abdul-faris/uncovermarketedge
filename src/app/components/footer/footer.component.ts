@@ -158,7 +158,7 @@ import { Router } from '@angular/router';
 })
 export class FooterComponent {
   private siteData = inject(SiteDataService);
-   private router = inject(Router);
+  private router = inject(Router);
   footerSections = this.siteData.footerSections;
 
   navigateTo(link: string) {
