@@ -253,7 +253,7 @@ interface UpiDetail {
     /* ── Account cards ────────────────────────────────────────── */
     .accounts-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 480px));
+      grid-template-columns: repeat(auto-fit, minmax(320px, 700px));
       justify-content: center;
       gap: 24px;
       margin-bottom: 48px
@@ -263,7 +263,8 @@ interface UpiDetail {
       background: var(--dark2); border: 1px solid var(--border);
       border-radius: 18px; overflow: hidden;
       transition: border-color 0.25s, transform 0.25s;
-
+      width: 100%;
+      max-width: 700px;
       &:hover {
         border-color: rgba(201,168,76,0.3);
         transform: translateY(-2px);
