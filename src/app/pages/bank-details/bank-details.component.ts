@@ -405,7 +405,7 @@ export class BankDetailsComponent {
 
   bankAccounts: BankAccount[] = [
    {
-      bank: 'Kodak Bank',
+      bank: 'Kotak Bank',
       logo: '🏛️',
       color: '#8b1a1a',
       holderName: 'DARPAN AGGARWAL KARTA',
@@ -417,7 +417,7 @@ export class BankDetailsComponent {
   ];
 
   upiDetails: UpiDetail[] = [
-    { label: 'Company UPI ID', id: '9650174842um@kotak', app: 'Kodak' },
+    { label: 'Company UPI ID', id: '9650174842um@kotak', app: 'Kotak' },
 
   ];
 
