@@ -27,8 +27,8 @@ export class SiteDataService {
       children: [
         { label: 'Regular', link: '/pricing/regular' },
         { label: 'Premium', link: '/pricing/premium' },
-        { label: 'Ultra Premium', link: '/pricing/ultra-premium' },
-        { label: 'Mentorship Program', link: '/pricing/mentorship' },
+            // { label: 'Ultra Premium', value: 'ultra-premium' },
+        // { label: 'Mentorship Program', link: '/pricing/mentorship' },
       ]
     },
     { label: 'Bank Details', link: '/bank-details' },

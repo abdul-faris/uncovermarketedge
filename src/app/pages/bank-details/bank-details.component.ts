@@ -163,7 +163,7 @@ interface UpiDetail {
               wallet. Always verify the account holder name before making any transfer.
               For any payment-related queries, contact us at
               <a href="mailto:support@marketedge.com">support&#64;marketedge.com</a> or
-              <a href="tel:+919999000001">+91 9999 000 001</a>.
+              <a href="tel:+917619625303">+91 7619625303</a>.
             </div>
           </div>
 
@@ -404,20 +404,20 @@ export class BankDetailsComponent {
   copied = signal<string>('');
 
   bankAccounts: BankAccount[] = [
-   {
-      bank: 'Kotak Bank',
-      logo: '🏛️',
-      color: '#8b1a1a',
-      holderName: 'DARPAN AGGARWAL KARTA',
-      accountNumber: '9650174842',
-      ifsc: 'KKBK0004601',
-      branch: 'DELHI-PEERAGARHI',
-      accountType: 'Current Account'
-    }
+  //  {
+  //     bank: '',
+  //     logo: '🏛️',
+  //     color: '#8b1a1a',
+  //     holderName: 'UNCOVER MARKETS',
+  //     accountNumber: '9650174842',
+  //     ifsc: 'KKBK0004601',
+  //     branch: 'DELHI-PEERAGARHI',
+  //     accountType: 'Current Account'
+  //   }
   ];
 
   upiDetails: UpiDetail[] = [
-    { label: 'Company UPI ID', id: '9650174842um@kotak', app: 'Kotak' },
+    // { label: 'Company UPI ID', id: '9650174842um@kotak', app: 'Kotak' },
 
   ];
 

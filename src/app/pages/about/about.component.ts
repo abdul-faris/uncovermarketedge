@@ -76,7 +76,7 @@ import { Router } from '@angular/router';
           </div>
 
           <div class="sebi-badge">
-            <strong>SEBI Reg:</strong> INH000013299 &nbsp;|&nbsp; BASL Member
+            <strong>SEBI Reg:</strong>  &nbsp;|&nbsp; BASL Member
           </div>
         </div>
       </section>

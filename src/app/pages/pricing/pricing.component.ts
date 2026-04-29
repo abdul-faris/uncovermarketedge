@@ -23,6 +23,7 @@ interface PricingTier {
   label: string;
   badge?: string;
   description: string;
+  disclaimer: string;
   rows: PricingRow[];
 }
 
@@ -82,6 +83,12 @@ interface PricingTier {
                 <div class="eyebrow">{{ tier.label }} Plan</div>
                 <h2 class="section-title">{{ tier.label }} <em>Pricing</em></h2>
                 <p class="tier-desc">{{ tier.description }}</p>
+
+                <!-- SEBI Disclaimer Alert -->
+                <div class="sebi-alert">
+                  <span class="sebi-alert-icon">⚠️</span>
+                  <span class="sebi-alert-text">{{ tier.disclaimer }}</span>
+                </div>
               </div>
 
               <div class="cards-grid">
@@ -280,6 +287,31 @@ interface PricingTier {
     }
     .tier-desc { margin-top: 12px; font-size: 15px; color: var(--muted); max-width: 560px; line-height: 1.7; }
 
+    /* ── SEBI Alert ──────────────────────────────────────────── */
+    .sebi-alert {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 16px;
+      padding: 10px 16px;
+      background: rgba(250, 173, 20, 0.08);
+      border: 1px solid rgba(250, 173, 20, 0.25);
+      border-left: 3px solid #faad14;
+      border-radius: 8px;
+      max-width: 560px;
+    }
+    .sebi-alert-icon {
+      font-size: 15px;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+    .sebi-alert-text {
+      font-size: 12.5px;
+      color: #d4a017;
+      line-height: 1.5;
+      font-weight: 500;
+    }
+
     .cards-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -399,7 +431,7 @@ interface PricingTier {
       font-size: 12.5px; color: #f87171; line-height: 1.65;
     }
 
-    /* ── Modal ──────────────────────────────────────────────── */──
+    /* ── Modal ───────────────────────────────────────────────── */
     .modal-overlay {
       position: fixed; inset: 0; z-index: 999;
       background: rgba(0,0,0,0.75);
@@ -484,6 +516,7 @@ interface PricingTier {
       .pricing-body { padding: 40px 20px 60px; }
       .cards-grid { grid-template-columns: 1fr; }
       .modal { padding: 28px 20px; }
+      .sebi-alert { max-width: 100%; }
     }
   `]
 })
@@ -496,7 +529,7 @@ export class PricingComponent implements OnInit {
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
       const tier = params.get('tier');
-      if (tier && ['regular', 'premium', 'ultra-premium'].includes(tier)) {
+      if (tier && ['regular', 'premium'].includes(tier)) {
         this.activeTier.set(tier);
       }
     });
@@ -505,49 +538,30 @@ export class PricingComponent implements OnInit {
   tiers: PricingTier[] = [
     {
       id: 'regular',
-      label: 'Regular',
+      label: 'Basic',
       description: 'Our entry-level subscription plan covering all major market segments with SMS-based recommendations and solid risk management.',
+      disclaimer: 'Subject to regulatory limits and guidelines prescribed by SEBI',
       rows: [
-        { service: 'Stock Cash Subscription', icon: '📈', monthly: '₹35,555', quarterly: '₹85,555', halfYearly: '₹1,49,999', risk: 'High', duration: 'Intraday / Positional', recommendations: '1–2 Calls', serviceType: 'SMS' },
-        { service: 'Stock / Index Futures', icon: '📊', monthly: '₹35,555', quarterly: '₹89,555', halfYearly: '₹1,49,999', risk: 'Very High', duration: 'Intraday / Positional', recommendations: '1–2 Calls', serviceType: 'SMS' },
-        { service: 'Stock / Index Options', icon: '⚙️', monthly: '₹39,999', quarterly: '₹1,05,999', halfYearly: '₹1,49,999', risk: 'Very High', duration: 'Intraday', recommendations: '1–2 Calls', serviceType: 'SMS' },
-        { service: 'Commodity (MCX / NCDEX)', icon: '🌾', monthly: '₹75,555', quarterly: '₹99,999', halfYearly: '₹1,49,999', risk: 'Very High', duration: 'Intraday / Positional', recommendations: '1–2 Calls', serviceType: 'SMS' },
-        { service: 'Bullions Subscription', icon: '🪙', monthly: '₹35,555', quarterly: '₹89,555', halfYearly: '₹1,49,999', risk: 'Very High', duration: 'Intraday / Positional', recommendations: '1–2 Calls', serviceType: 'SMS' },
-        { service: 'Base Metals Subscription', icon: '⚒️', monthly: '₹49,999', quarterly: '₹75,555', halfYearly: '₹1,49,999', risk: 'Very High', duration: 'Intraday', recommendations: '1–2 Calls', serviceType: 'SMS' },
-        { service: 'Energy Subscription', icon: '⚡', monthly: '₹49,999', quarterly: '₹75,555', halfYearly: '₹1,49,999', risk: 'Very High', duration: 'Intraday', recommendations: '1–2 Calls', serviceType: 'SMS' },
-      ]
+        { service: 'Stock Cash Subscription (Equity / Delivery)', icon: '📈', monthly: '₹29,000* +GST', quarterly: '₹63,000* +GST', halfYearly: '₹94,000* +GST', risk: 'High', duration: 'Intraday / Positional', recommendations: '1–2 Calls', serviceType: 'SMS' },
+        { service: 'Stock / Index Futures', icon: '📊', monthly: '₹38,500* +GST', quarterly: '₹68,500* +GST', halfYearly: '₹98,500* +GST', risk: 'Very High', duration: 'Intraday / Positional', recommendations: '1–2 Calls', serviceType: 'SMS' },
+        { service: 'Stock / Index Options', icon: '⚙️', monthly: '₹35,555* +GST', quarterly: '₹65,555* +GST', halfYearly: '₹95,555* +GST', risk: 'Very High', duration: 'Intraday', recommendations: '1–2 Calls', serviceType: 'SMS' },
+        { service: 'Commodity (MCX / NCDEX)', icon: '🌾', monthly: '₹39,999* +GST', quarterly: '₹69,999* +GST', halfYearly: '₹99,000* +GST', risk: 'Very High', duration: 'Intraday / Positional', recommendations: '1–2 Calls', serviceType: 'SMS' },
+      ],
     },
     {
       id: 'premium',
       label: 'Premium',
       badge: 'Popular',
       description: 'Enhanced advisory with Chat & Voice support from a dedicated executive. Higher accuracy intraday calls with deeper market analysis.',
+      disclaimer: 'Subject to regulatory limits and guidelines prescribed by SEBI',
       rows: [
-        { service: 'Stock Cash Subscription', icon: '📈', monthly: '₹55,555', quarterly: '₹1,29,999', halfYearly: '₹1,49,999', risk: 'Very High', duration: 'Intraday', recommendations: '1–2 Calls', serviceType: 'Chat / Voice with Executive' },
-        { service: 'Stock / Index Futures', icon: '📊', monthly: '₹69,999', quarterly: '₹1,29,999', halfYearly: '₹1,49,999', risk: 'Very High', duration: 'Intraday', recommendations: '1–2 Calls', serviceType: 'Chat / Voice with Executive' },
-        { service: 'Stock / Index Options', icon: '⚙️', monthly: '₹79,999', quarterly: '₹1,00,000', halfYearly: '₹1,49,999', risk: 'Very High', duration: 'Intraday', recommendations: '1–2 Calls', serviceType: 'Chat / Voice with Executive' },
-        { service: 'Dynamic Service (BTST / STBT / Swing)', icon: '🔄', monthly: '₹75,555', quarterly: '—', halfYearly: '—', risk: 'Very High', duration: 'Intraday / Positional', recommendations: '1–2 Calls', serviceType: 'Chat / Voice with Executive' },
-        { service: 'Commodity (MCX / NCDEX)', icon: '🌾', monthly: '₹80,999', quarterly: '₹1,09,999', halfYearly: '₹1,49,999', risk: 'Very High', duration: 'Intraday', recommendations: '1–2 Calls', serviceType: 'Chat / Voice with Executive' },
-        { service: 'Bullions Subscription', icon: '🪙', monthly: '₹55,555', quarterly: '₹1,05,555', halfYearly: '₹1,49,999', risk: 'Very High', duration: 'Intraday', recommendations: '1–2 Calls', serviceType: 'Chat / Voice with Executive' },
-        { service: 'Base Metals Subscription', icon: '⚒️', monthly: '₹65,555', quarterly: '₹99,999', halfYearly: '₹1,49,999', risk: 'Very High', duration: 'Intraday', recommendations: '1–2 Calls', serviceType: 'Chat / Voice with Executive' },
-        { service: 'Energy Subscription', icon: '⚡', monthly: '₹65,555', quarterly: '₹99,999', halfYearly: '₹1,49,999', risk: 'Very High', duration: 'Intraday', recommendations: '1–2 Calls', serviceType: 'Chat / Voice with Executive' },
-      ]
+        { service: 'Stock Cash Subscription (Equity / Delivery)', icon: '📈', monthly: '₹69,000* +GST', quarterly: '₹1,48,000* +GST', halfYearly: '-', risk: 'Very High', duration: 'Intraday', recommendations: '1–2 Calls', serviceType: 'Chat / Voice with Executive' },
+        { service: 'Stock / Index Futures', icon: '📊', monthly: '₹79,900* +GST', quarterly: '₹1,49,500* +GST', halfYearly: '-', risk: 'Very High', duration: 'Intraday', recommendations: '1–2 Calls', serviceType: 'Chat / Voice with Executive' },
+        { service: 'Stock / Index Options', icon: '⚙️', monthly: '₹75,555* +GST', quarterly: '₹1,49,999* +GST', halfYearly: '-', risk: 'Very High', duration: 'Intraday', recommendations: '1–2 Calls', serviceType: 'Chat / Voice with Executive' },
+        { service: 'Dynamic Service (BTST / STBT / Swing)', icon: '🔄', monthly: '₹75,555* +GST', quarterly: '—', halfYearly: '-', risk: 'Very High', duration: 'Intraday / Positional', recommendations: '1–2 Calls', serviceType: 'Chat / Voice with Executive' },
+        { service: 'Commodity (MCX / NCDEX)', icon: '🌾', monthly: '₹78,000* +GST', quarterly: '₹1,49,999* +GST', halfYearly: '-', risk: 'Very High', duration: 'Intraday', recommendations: '1–2 Calls', serviceType: 'Chat / Voice with Executive' },
+      ],
     },
-    {
-      id: 'ultra-premium',
-      label: 'Ultra Premium',
-      description: 'Our highest-tier service for serious traders — direct analyst access, HNI advisory, and bespoke strategies across all asset classes.',
-      rows: [
-        { service: 'Stock Cash Subscription', icon: '📈', monthly: '₹99,999', quarterly: '₹1,99,999', halfYearly: '₹2,99,999', risk: 'Very High', duration: 'Intraday / Positional', recommendations: '2–3 Calls', serviceType: 'Direct Analyst Access' },
-        { service: 'Stock / Index Futures', icon: '📊', monthly: '₹99,999', quarterly: '₹1,99,999', halfYearly: '₹2,99,999', risk: 'Very High', duration: 'Intraday / Positional', recommendations: '2–3 Calls', serviceType: 'Direct Analyst Access' },
-        { service: 'Stock / Index Options', icon: '⚙️', monthly: '₹1,09,999', quarterly: '₹2,19,999', halfYearly: '₹2,99,999', risk: 'Very High', duration: 'Intraday', recommendations: '2–3 Calls', serviceType: 'Direct Analyst Access' },
-        { service: 'Commodity (MCX / NCDEX)', icon: '🌾', monthly: '₹1,19,999', quarterly: '₹2,29,999', halfYearly: '₹2,99,999', risk: 'Very High', duration: 'Intraday / Positional', recommendations: '2–3 Calls', serviceType: 'Direct Analyst Access' },
-        { service: 'Bullions Subscription', icon: '🪙', monthly: '₹89,999', quarterly: '₹1,79,999', halfYearly: '₹2,99,999', risk: 'Very High', duration: 'Intraday / Positional', recommendations: '2–3 Calls', serviceType: 'Direct Analyst Access' },
-        { service: 'Base Metals Subscription', icon: '⚒️', monthly: '₹89,999', quarterly: '₹1,79,999', halfYearly: '₹2,99,999', risk: 'Very High', duration: 'Intraday', recommendations: '2–3 Calls', serviceType: 'Direct Analyst Access' },
-        { service: 'Energy Subscription', icon: '⚡', monthly: '₹89,999', quarterly: '₹1,79,999', halfYearly: '₹2,99,999', risk: 'Very High', duration: 'Intraday', recommendations: '2–3 Calls', serviceType: 'Direct Analyst Access' },
-        { service: 'HNI Subscription', icon: '💼', monthly: '₹1,49,999', quarterly: '₹2,99,999', halfYearly: '₹4,99,999', risk: 'Very High', duration: 'Intraday / Positional', recommendations: '2–4 Calls', serviceType: 'Dedicated Relationship Manager' },
-      ]
-    }
   ];
 
   activeTierLabel(): string {
@@ -568,10 +582,9 @@ export class PricingComponent implements OnInit {
     document.body.style.overflow = '';
   }
 
-   navigateTo(link: string) {
+  navigateTo(link: string) {
     this.router.navigateByUrl(link).then(() => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
-    })
+    });
   }
-
 }

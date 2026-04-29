@@ -19,12 +19,12 @@ import { Router } from '@angular/router';
             and subscription advisory services across equity, commodity, and derivatives markets.
           </p>
           <div class="footer-contact">
-            <div>📍 Darpan Aggarwal, F-25/57 sector 3 rohini, Delhi 110085</div>
-            <div><a href="mailto:subscriber.edu@uncovermarkets.org">subscriber.edu&#64;uncovermarkets.org</a></div>
-            <div><a href="tel:+917827384962">+91 7827 384 962</a></div>
+            <div>📍 </div>
+            <div><a href="mailto:subscriber.edu@uncovermarkets.org"></a></div>
+            <div><a href="tel:+917619625303">+917619625303</a></div>
           </div>
           <div class="sebi-badge">
-            <strong>SEBI Reg.</strong> INH000013299 &nbsp;·&nbsp; BASL Member &nbsp;·&nbsp; NISM Certified
+            <strong>SEBI Reg.</strong>  &nbsp;·&nbsp; BASL Member &nbsp;·&nbsp; NISM Certified
           </div>
         </div>
 
