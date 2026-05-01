@@ -6,6 +6,12 @@ import { ServiceDetailComponent } from './pages/service-detail/service-detail.co
 import { PricingComponent } from './pages/pricing/pricing.component';
 import { BankDetailsComponent } from './pages/bank-details/bank-details.component';
 import { ConsentComponent } from './pages/consent/consent.component';
+import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
+import { TermsConditionsComponent } from './pages/terms-conditions/terms-conditions.component';
+import { RefundPolicyComponent } from './pages/refund-policy/refund-policy.component';
+import { DisclaimerComponent } from './pages/disclaimer/disclaimer.component';
+import { DisclosureComponent } from './pages/disclosure/disclosure.component';
+import { GrievanceComponent } from './pages/grievance/grievance.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -16,5 +22,11 @@ export const routes: Routes = [
   { path: 'pricing/:tier', component: PricingComponent },
   { path: 'bank-details', component: BankDetailsComponent },
   { path: 'consent', component: ConsentComponent },
+  { path: 'privacy-policy', component: PrivacyPolicyComponent },
+  { path: 'terms-conditions', component: TermsConditionsComponent },
+  { path: 'refund-policy', component: RefundPolicyComponent },
+  { path: 'disclaimer', component: DisclaimerComponent },
+  { path: 'disclosure', component: DisclosureComponent },
+  { path: 'grievance', component: GrievanceComponent },
   { path: '**', redirectTo: '' }
 ];

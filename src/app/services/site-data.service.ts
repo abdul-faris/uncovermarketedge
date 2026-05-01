@@ -27,8 +27,8 @@ export class SiteDataService {
       children: [
         { label: 'Regular', link: '/pricing/regular' },
         { label: 'Premium', link: '/pricing/premium' },
-        { label: 'Ultra Premium', link: '/pricing/ultra-premium' },
-        { label: 'Mentorship Program', link: '/pricing/mentorship' },
+        // { label: 'Ultra Premium', value: 'ultra-premium' },
+        // { label: 'Mentorship Program', link: '/pricing/mentorship' },
       ]
     },
     { label: 'Bank Details', link: '/bank-details' },
@@ -236,21 +236,21 @@ export class SiteDataService {
       title: 'Company',
       links: [
         { label: 'About Us', href: '/about' },
-        { label: 'Our Team', href: '/team' },
-        { label: 'Mentorship Program', href: '/mentorship' },
+        // { label: 'Our Team', href: '/team' },
+        // { label: 'Mentorship Program', href: '/mentorship' },
         { label: 'Bank Details', href: '/bank-details' },
-        { label: 'Complaint Board', href: '/complaint-board' },
-        { label: 'Investor Charter', href: '/investor-charter' },
-        { label: 'Careers', href: '/careers' },
+        // { label: 'Complaint Board', href: '/complaint-board' },
+        // { label: 'Investor Charter', href: '/investor-charter' },
+        // { label: 'Careers', href: '/careers' },
         { label: 'Consent Form', href: '/consent' },
       ]
     },
     {
       title: 'Legal',
       links: [
-        { label: 'Privacy Policy', href: '/privacy' },
+        { label: 'Privacy Policy', href: '/privacy-policy' },
         { label: 'Terms & Conditions', href: '/terms-conditions' },
-        { label: 'Refund Policy', href: '/refund' },
+        { label: 'Refund Policy', href: '/refund-policy' },
         { label: 'Disclaimer', href: '/disclaimer' },
         { label: 'Disclosure', href: '/disclosure' },
         { label: 'Grievance', href: '/grievance' },

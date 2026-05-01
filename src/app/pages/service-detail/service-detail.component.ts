@@ -103,7 +103,7 @@ import { Service } from '../../models/site.models';
                 <div class="help-icon">📞</div>
                 <div class="sidebar-card-title">Need Help?</div>
                 <p class="help-text">Do you need assistance choosing the right plan? Please call us.</p>
-                <a href="tel:+917827384962" class="help-phone">+91 7827 384 962</a>
+                <a href="tel:+917619625303" class="help-phone">+91 7619625303</a>
                 <a routerLink="/contact" class="btn-primary" style="margin-top: 20px; width: 100%; justify-content: center;">
                   Contact Us →
                 </a>
@@ -112,7 +112,7 @@ import { Service } from '../../models/site.models';
               <!-- SEBI badge -->
               <div class="sidebar-card sebi-sidebar">
                 <div class="sidebar-card-title">SEBI Details</div>
-                <div class="sebi-row-s"><strong>Reg. No.</strong><span>INH000013299</span></div>
+                <div class="sebi-row-s"><strong>Reg. No.</strong><span></span></div>
                 <div class="sebi-row-s"><strong>Type</strong><span>Research Analyst</span></div>
                 <div class="sebi-row-s"><strong>BASL</strong><span>Member</span></div>
                 <p class="sebi-note-s">
