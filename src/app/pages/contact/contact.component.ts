@@ -777,8 +777,8 @@ export class ContactComponent {
   plans = [
     { label: 'Regular', value: 'regular' },
     { label: 'Premium', value: 'premium' },
-    { label: 'Ultra Premium', value: 'ultra-premium' },
-    { label: 'Mentorship', value: 'mentorship' },
+    // { label: 'Ultra Premium', value: 'ultra-premium' },
+    // { label: 'Mentorship', value: 'mentorship' },
   ];
 
   faqs = [
