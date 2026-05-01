@@ -32,6 +32,7 @@ export class SiteDataService {
       ]
     },
     { label: 'Bank Details', link: '/bank-details' },
+    { label: 'Consent Form', link: '/consent' },
   ];
 
 
@@ -241,7 +242,7 @@ export class SiteDataService {
         { label: 'Complaint Board', href: '/complaint-board' },
         { label: 'Investor Charter', href: '/investor-charter' },
         { label: 'Careers', href: '/careers' },
-        { label: 'Consent Form', href: '/consent-form' },
+        { label: 'Consent Form', href: '/consent' },
       ]
     },
     {

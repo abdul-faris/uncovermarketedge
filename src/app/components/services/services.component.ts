@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
+import { RouterLink, Router } from '@angular/router';
 import { SiteDataService } from '../../services/site-data.service';
 
 @Component({
@@ -20,11 +20,11 @@ import { SiteDataService } from '../../services/site-data.service';
 
         <div class="services-grid">
           @for (service of services; track service.title) {
-            <div class="service-card">
+            <div class="service-card" (click)="goToService(service.link)">
               <div class="service-icon">{{ service.icon }}</div>
               <h3>{{ service.title }}</h3>
               <p>{{ service.description }}</p>
-              <a [routerLink]="service.link" class="service-link">Learn more →</a>
+              <a [routerLink]="service.link" class="service-link" (click)="$event.stopPropagation()">Learn more →</a>
             </div>
           }
         </div>
@@ -145,5 +145,10 @@ import { SiteDataService } from '../../services/site-data.service';
 })
 export class ServicesComponent {
   private siteData = inject(SiteDataService);
+  private router = inject(Router);
   services = this.siteData.services;
+
+  goToService(link: string) {
+    this.router.navigate([link]);
+  }
 }

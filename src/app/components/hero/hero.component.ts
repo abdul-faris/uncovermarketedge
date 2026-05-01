@@ -28,7 +28,7 @@ import { Router } from '@angular/router';
 
       <div class="hero-actions fade-up delay-3">
         <a routerLink="/contact" (click)="navigateTo('/contact')" class="btn-primary">Get Started →</a>
-        <a href="#services" class="btn-outline">Explore Services</a>
+        <a href="#services" (click)="scrollToServices($event)" class="btn-outline">Explore Services</a>
       </div>
 
     </section>
@@ -154,9 +154,26 @@ import { Router } from '@angular/router';
 export class HeroComponent {
   private siteData = inject(SiteDataService);
   private router =inject(Router);
+  
   navigateTo(link: string) {
     this.router.navigateByUrl(link).then(() => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     })
+  }
+
+  scrollToServices(event: Event) {
+    event.preventDefault();
+    const element = document.getElementById('services');
+    if (element) {
+      // Get the navbar height to offset the scroll (approx 80px)
+      const navbarHeight = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.scrollY - navbarHeight;
+  
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
   }
 }

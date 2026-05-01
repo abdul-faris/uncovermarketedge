@@ -5,6 +5,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { ServiceDetailComponent } from './pages/service-detail/service-detail.component';
 import { PricingComponent } from './pages/pricing/pricing.component';
 import { BankDetailsComponent } from './pages/bank-details/bank-details.component';
+import { ConsentComponent } from './pages/consent/consent.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -14,5 +15,6 @@ export const routes: Routes = [
   { path: 'pricing', component: PricingComponent },
   { path: 'pricing/:tier', component: PricingComponent },
   { path: 'bank-details', component: BankDetailsComponent },
+  { path: 'consent', component: ConsentComponent },
   { path: '**', redirectTo: '' }
 ];
