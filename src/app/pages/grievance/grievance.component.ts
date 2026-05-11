@@ -19,22 +19,24 @@ import { FooterComponent } from '../../components/footer/footer.component';
           <p class="last-updated">Last Updated: May 2026</p>
         </div>
         <div class="legal-content">
-          <p>We strive to provide excellent service, but if you have any complaints or grievances, please follow our escalation matrix:</p>
-
-          <h3>Level 1: Customer Support</h3>
-          <p>For immediate resolution of your queries or complaints, please reach out to our support team.<br>
-          <strong style="color: var(--white);">Email:</strong> subscriber.edu&#64;uncovermarkets.org<br>
-          <strong style="color: var(--white);">Phone:</strong> +91 7619625303</p>
-
-          <h3>Level 2: Compliance Officer</h3>
-          <p>If your issue is not resolved within 7 working days, you may escalate the matter to our Compliance Officer.<br>
-          <strong style="color: var(--white);">Email:</strong> compliance&#64;uncovermarkets.org</p>
-
-          <h3>Level 3: SEBI SCORES Portal</h3>
-          <p>If you are not satisfied with our resolution, you may lodge a complaint with SEBI through the SCORES (SEBI Complaints Redress System) portal.<br>
-          <strong style="color: var(--white);">Website:</strong> <a href="https://scores.gov.in" target="_blank" style="color: var(--gold); text-decoration: none;">https://scores.gov.in</a></p>
+          <p>At Uncover Market Edge, we believe in providing the best possible service to our clients. If you have any grievances or complaints regarding our services, please follow the steps below for resolution:</p>
           
-          <p style="margin-top: 32px; font-size: 13px; color: var(--gold);"><em>Note: Filing complaints on SCORES is easy and quick. Please ensure you have approached the company first before filing a grievance on the SCORES portal.</em></p>
+          <h3>Step 1: Contact Customer Support</h3>
+          <p>In case of any query, concern, or grievance, you can first reach out to our Customer Support team at <strong>subscriber.edu&#64;uncovermarkets.org</strong> or call us at <strong>+91 7619625303</strong>. We aim to resolve all complaints within 48-72 working hours.</p>
+          
+          <h3>Step 2: Compliance Officer</h3>
+          <p>If your grievance is not resolved satisfactorily by our support team, you may escalate the matter to our Compliance Officer.</p>
+          <ul style="margin-bottom: 16px; padding-left: 20px;">
+            <li><strong>Email:</strong> compliance&#64;uncovermarkets.org</li>
+            <li><strong>Address:</strong> F-25/57, Greenview Appartments, Sector-3, Rohini, DELHI, 110085</li>
+          </ul>
+          
+          <h3>Step 3: SEBI SCORES</h3>
+          <p>If you are still not satisfied with the resolution provided, you may lodge your complaint with the Securities and Exchange Board of India (SEBI) on the SCORES (SEBI Complaints Redress System) portal at <a href="https://scores.gov.in/" target="_blank" style="color: var(--gold); text-decoration: none;">https://scores.gov.in/</a>. You may also download the SEBI SCORES app from the App Store or Google Play Store.</p>
+          <p><strong>SEBI Registration Number:</strong> INH000026859</p>
+          
+          <h3>Step 4: ODR Portal</h3>
+          <p>Alternatively, disputes can be resolved through the Online Dispute Resolution (ODR) portal introduced by SEBI. The SMART ODR portal can be accessed at <a href="https://smartodr.in/" target="_blank" style="color: var(--gold); text-decoration: none;">https://smartodr.in/</a>.</p>
         </div>
       </div>
     </main>
@@ -54,4 +56,4 @@ import { FooterComponent } from '../../components/footer/footer.component';
     @keyframes fadeUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
   `]
 })
-export class GrievanceComponent {}
+export class GrievanceComponent { }

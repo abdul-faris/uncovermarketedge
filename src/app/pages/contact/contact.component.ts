@@ -43,7 +43,7 @@ import emailjs from '@emailjs/browser';
                   <span class="info-icon">📍</span>
                   <div>
                     <div class="info-title">Address</div>
-                    <div class="info-val">Darpan Aggarwal, F-25/57 sector 3 rohini,<br>Delhi 110085</div>
+                    <div class="info-val">F-25/57, Greenview Appartments, Sector-3, Rohini,<br>DELHI, NATIONAL CAPITAL TERRITORY OF DELHI, 110085</div>
                   </div>
                 </div>
                 <div class="info-entry">
@@ -57,7 +57,7 @@ import emailjs from '@emailjs/browser';
                   <span class="info-icon">📞</span>
                   <div>
                     <div class="info-title">Phone</div>
-                    <a href="tel:+917827384962" class="info-link">+91 7827 384 962</a><br>
+                    <a href="tel:+917619625303" class="info-link">+91 7619625303</a><br>
                   </div>
                 </div>
                 <div class="info-entry">
@@ -71,7 +71,7 @@ import emailjs from '@emailjs/browser';
             </div>
 
             <div class="sebi-card">
-              <div class="sebi-row"><strong>SEBI Reg. No.</strong><span>INH000013299</span></div>
+              <div class="sebi-row"><strong>SEBI Reg. No.</strong><span>INH000026859</span></div>
               <div class="sebi-row"><strong>BASL Member</strong><span>Registered</span></div>
               <div class="sebi-row"><strong>NISM Certified</strong><span>Yes</span></div>
               <p class="sebi-note">
@@ -788,7 +788,7 @@ export class ContactComponent {
     },
     {
       q: 'Is UncoverMarketEdge Research registered with SEBI?',
-      a: 'Yes. UncoverMarketEdge Research is a SEBI-registered Research Analyst firm (Reg. No. INH000013299) and a member of BASL. Our analysts are NISM-certified.'
+      a: 'Yes. UncoverMarketEdge Research is a SEBI-registered Research Analyst firm (Reg. No. INH000026859) and a member of BASL. Our analysts are NISM-certified.'
     },
     {
       q: 'Can I switch between subscription plans after joining?',

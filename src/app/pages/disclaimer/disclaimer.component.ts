@@ -19,18 +19,15 @@ import { FooterComponent } from '../../components/footer/footer.component';
           <p class="last-updated">Last Updated: May 2026</p>
         </div>
         <div class="legal-content">
-          <div class="highlight-box" style="padding: 20px; background: rgba(201,168,76,0.05); border-left: 4px solid var(--gold); margin-bottom: 32px; border-radius: 4px;">
-            <strong style="color: var(--white);">Standard SEBI Disclaimer:</strong> Investment in securities market are subject to market risks. Read all the related documents carefully before investing.
-          </div>
-
-          <h3>1. No Guarantee of Returns</h3>
-          <p>Registration granted by SEBI, membership of BASL, and certification from NISM in no way guarantee the performance of the intermediary or provide any assurance of returns to investors. Past performance of our recommendations does not guarantee future results.</p>
-
-          <h3>2. Educational & Research Purposes</h3>
-          <p>The information and views provided on this website are for educational and research purposes only and should not be construed as financial or investment advice. Investors should consult their personal financial advisor before making any investment decisions.</p>
-
-          <h3>3. Liability</h3>
-          <p>UncoverMarketEdge Research, its directors, and employees shall not be liable for any direct, indirect, or consequential losses arising from the use of our research reports or recommendations.</p>
+          <ul>
+          <li>Investment in securities market are subject to market risks. Read all the related documents carefully before investing.</li>
+          <li>Market Risks refer to partial or permanent loss on your investments in certain market conditions.</li>
+          <li>Registration granted by SEBI and certification from NISM in no way guarantees the performance of the intermediary or provides any assurance of returns to investors.</li>
+          <li>The securities quoted are for illustration only and are not recommendatory.</li>
+          <li>Investing in financial markets involves risks. Past performance is not indicative of future results. You should carefully consider your risk tolerance and financial situation before making any investment.</li>
+          <li>We operate in accordance with SEBI Research Analyst, 2014 regulations and guidelines. Any information provided here is intended to be accurate and in compliance with SEBI requirements. However, we do not warrant or represent that the information provided on this website/platform is always up-to-date, accurate, or complete.</li>
+          <li>Details provided in any social media platforms are for educational purposes and should not be construed as investment advice. We reserve the right to modify or update this disclaimer at any time without notice.</li>
+          </ul>
         </div>
       </div>
     </main>
@@ -50,4 +47,4 @@ import { FooterComponent } from '../../components/footer/footer.component';
     @keyframes fadeUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
   `]
 })
-export class DisclaimerComponent {}
+export class DisclaimerComponent { }

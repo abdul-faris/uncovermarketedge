@@ -19,14 +19,16 @@ import { FooterComponent } from '../../components/footer/footer.component';
           <p class="last-updated">Last Updated: May 2026</p>
         </div>
         <div class="legal-content">
-          <h3>1. General Policy</h3>
-          <p>All sales and subscriptions for our research services are final. Due to the digital nature of our services and immediate access to our research and recommendations, we do not offer refunds, cancellations, or transfers of subscriptions under any circumstances.</p>
-
-          <h3>2. Free Trial</h3>
-          <p>We encourage all prospective clients to thoroughly review our past performance, read our methodologies, and understand our services before subscribing. We do not offer refunds on the basis of dissatisfaction or trading losses.</p>
-
-          <h3>3. Service Interruptions</h3>
-          <p>In the rare event of prolonged service interruptions caused strictly by our systems, we may, at our sole discretion, compensate by extending your subscription period. Financial refunds will not be issued.</p>
+          <p>All sales are final. There will be ABSOLUTELY NO REFUNDS OR CANCELLATIONS. Before subscribing to our services, please ensure that you have thoroughly evaluated our offerings using the evaluation version we provide. We do not offer refunds on subscriptions that have already been purchased.
+          
+          We strongly believe in the quality of our services and support, which is why we have a NO REFUND POLICY without exceptions. However, if a client accidentally makes a duplicate payment for a single transaction, the excess amount will be refunded via the original payment method within 7 to 10 working days.
+          
+          For this reason, we strongly recommend that before making a payment, our visitors:
+          
+          Read all information about our products, services, and support.
+          Evaluate the quality of our services through the provided evaluation version.
+          Learn more about our company and technical team.
+          Read our Terms of Use and Privacy Policy.</p>
         </div>
       </div>
     </main>
@@ -46,4 +48,4 @@ import { FooterComponent } from '../../components/footer/footer.component';
     @keyframes fadeUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
   `]
 })
-export class RefundPolicyComponent {}
+export class RefundPolicyComponent { }

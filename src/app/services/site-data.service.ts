@@ -212,10 +212,10 @@ export class SiteDataService {
   ];
 
   whyStats: Stat[] = [
-    { value: '5K+', label: 'Happy Clients' },
-    { value: '2+', label: 'Years Active' },
-    { value: '98%', label: 'Satisfaction Rate' },
-    { value: '8', label: 'Service Categories' },
+    { value: 'Institutional', label: 'Grade Research' },
+    { value: 'High-Conviction', label: 'Trade Setups' },
+    { value: 'Risk-First', label: 'Capital Protection' },
+    { value: 'Actionable', label: 'Market Intelligence' },
   ];
 
   footerSections: FooterSection[] = [

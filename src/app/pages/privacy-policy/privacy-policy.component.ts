@@ -19,17 +19,11 @@ import { FooterComponent } from '../../components/footer/footer.component';
           <p class="last-updated">Last Updated: May 2026</p>
         </div>
         <div class="legal-content">
-          <h3>1. Introduction</h3>
-          <p>UncoverMarketEdge Research Private Limited ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your personal and financial information when you use our website and services.</p>
-          
-          <h3>2. Information We Collect</h3>
-          <p>To comply with SEBI regulations and provide our services, we may collect personal information including but not limited to: your name, contact details, PAN, Aadhaar, Demat account details, financial status, and investment objectives.</p>
-          
-          <h3>3. How We Use Your Information</h3>
-          <p>We use your information strictly for KYC verification, providing research and advisory services, billing, and regulatory compliance. We do not sell or rent your personal information to third parties.</p>
-
-          <h3>4. Data Security</h3>
-          <p>We implement robust security measures to protect your data from unauthorized access. However, no data transmission over the internet can be guaranteed to be 100% secure.</p>
+          <p>"Uncover Market Edge" respects and values the Right to Privacy of each and every individual. We are committed to maintaining the confidentiality of all information, whether public or private, provided to us by our clients. This Privacy Policy of "Uncover Market Edge" applies to both current and former clients.</p>
+          <p>Your information, whether public or private, will NOT be sold, rented, exchanged, transferred, or given to any company or individual for any reason without your consent. It will be used SOLELY for providing the services to you for which you have subscribed to us and not for any other purposes. Your information represents your identity with us. If any changes are made to the information you provided, please notify us by calling or emailing us.</p>
+          <p>In addition to the services provided, your information (mobile number, email ID, etc.) may be used to send you newsletters, surveys, contest information, or updates about new services for your benefit. By subscribing to our services, you agree that "Uncover Market Edge" has the right to do so.</p>
+          <p>When filling out the ‘Quick Form’ and the ‘Free Trial Form’ on our website, you agree to provide your valid mobile number. By providing your mobile number, you consent to receive calls and SMS from us, even if your number is registered on the National ‘Do Not Disturb’ registry.</p>
+          <p>By subscribing to our services, you consent to our Privacy Policy and Terms of Use.</p>
         </div>
       </div>
     </main>

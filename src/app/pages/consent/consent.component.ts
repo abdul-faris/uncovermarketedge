@@ -22,7 +22,7 @@ import emailjs from '@emailjs/browser';
           <div class="eyebrow fade-up">Legal</div>
           <h1 class="fade-up delay-1">Client <em>Consent</em> Form</h1>
           <p class="ch-sub fade-up delay-2">
-            UncoverMarketEdge Research Registration No.: INH000013299
+            UncoverMarketEdge Research Registration No.: INH000026859
           </p>
         </div>
       </section>
@@ -91,7 +91,7 @@ import emailjs from '@emailjs/browser';
                 <label>Terms and Conditions</label>
                 <div class="terms-box">
                   <p><strong>Parties to these Terms and Conditions:</strong></p>
-                  <p>i. Research Analyst: UncoverMarketEdge Research a SEBI Registered Research Analyst, holding Registration No. <strong>INH000013299</strong>, with its registered office located at Darpan Aggarwal, F-25/57 sector 3 rohini, Delhi 110085. hereinafter referred to as the "Research Analyst" or "RA";</p>
+                  <p>i. Research Analyst: UncoverMarketEdge Research a SEBI Registered Research Analyst, holding Registration No. <strong>INH000026859</strong>, with its registered office located at F-25/57, Greenview Appartments, Sector-3, Rohini, DELHI, NATIONAL CAPITAL TERRITORY OF DELHI, 110085. hereinafter referred to as the "Research Analyst" or "RA";</p>
                   <p>ii. Client: The individual or entity subscribing to or availing research services provided by the Research Analyst, hereinafter referred to as the "Client."</p>
                   <p><strong>1. Scope of Services</strong></p>
                   <p>The Research Analyst shall provide research and recommendations on securities, commodities, and other financial instruments as per the chosen subscription plan. The recommendations are purely based on technical and fundamental analysis and do not guarantee any specific returns.</p>
