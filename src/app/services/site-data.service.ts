@@ -28,7 +28,7 @@ export class SiteDataService {
         { label: 'Regular', link: '/pricing/regular' },
         { label: 'Premium', link: '/pricing/premium' },
         // { label: 'Ultra Premium', value: 'ultra-premium' },
-        // { label: 'Mentorship Program', link: '/pricing/mentorship' },
+        { label: 'Mentorship Program', link: '/mentorship' },
       ]
     },
     { label: 'Bank Details', link: '/bank-details' },
@@ -237,9 +237,9 @@ export class SiteDataService {
       links: [
         { label: 'About Us', href: '/about' },
         // { label: 'Our Team', href: '/team' },
-        // { label: 'Mentorship Program', href: '/mentorship' },
+        { label: 'Mentorship Program', href: '/mentorship' },
         { label: 'Bank Details', href: '/bank-details' },
-        // { label: 'Complaint Board', href: '/complaint-board' },
+        { label: 'Complaint Board', href: '/complaint-board' },
         // { label: 'Investor Charter', href: '/investor-charter' },
         // { label: 'Careers', href: '/careers' },
         { label: 'Consent Form', href: '/consent' },

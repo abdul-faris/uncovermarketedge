@@ -12,6 +12,8 @@ import { RefundPolicyComponent } from './pages/refund-policy/refund-policy.compo
 import { DisclaimerComponent } from './pages/disclaimer/disclaimer.component';
 import { DisclosureComponent } from './pages/disclosure/disclosure.component';
 import { GrievanceComponent } from './pages/grievance/grievance.component';
+import { ComplaintBoardComponent } from './pages/complaint-board/complaint-board.component';
+import { MentorshipComponent } from './pages/mentorship/mentorship.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -28,5 +30,7 @@ export const routes: Routes = [
   { path: 'disclaimer', component: DisclaimerComponent },
   { path: 'disclosure', component: DisclosureComponent },
   { path: 'grievance', component: GrievanceComponent },
+  { path: 'complaint-board', component: ComplaintBoardComponent },
+  { path: 'mentorship', component: MentorshipComponent },
   { path: '**', redirectTo: '' }
 ];
