@@ -159,6 +159,13 @@ import { FooterComponent } from '../../components/footer/footer.component';
       .hero-section h1 { font-size: 40px; }
       .module { flex-direction: column; gap: 16px; text-align: center; }
     }
+
+    @media (max-width: 500px) {
+      .hero-section { padding: 80px 16px; }
+      .perk-grid { grid-template-columns: 1fr; gap: 16px; }
+      .module { padding: 20px; text-align: left; align-items: flex-start; }
+      .module-number { font-size: 36px; }
+    }
   `]
 })
 export class MentorshipComponent { }

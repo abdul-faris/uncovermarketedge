@@ -16,7 +16,10 @@ import { NavItem } from '../../models/site.models';
   imports: [CommonModule, RouterLink],
   template: `
     <nav>
-      <a class="logo" routerLink="/">UncoverMarket<span>Edge</span></a>
+      <a class="logo" routerLink="/">
+        <img src="assets/logo.png" alt="Logo" class="logo-img" />
+        UncoverMarket<span>Edge</span>
+      </a>
 
       <ul class="nav-links">
         @for (item of navItems; track item.label) {
@@ -55,12 +58,35 @@ import { NavItem } from '../../models/site.models';
       @if (mobileOpen) {
         <div class="mobile-menu">
           @for (item of navItems; track item.label) {
-            <a
-              [routerLink]="item.link || null"
-              (click)="mobileOpen = false"
-            >
-              {{ item.label }}
-            </a>
+            <div class="mobile-menu-item-group">
+              @if (item.children?.length) {
+                <div class="mobile-menu-parent" (click)="toggleMobileSubmenu(item.label)">
+                  <span>{{ item.label }}</span>
+                  <span class="chevron" [class.open]="mobileSubmenuOpen[item.label]">▾</span>
+                </div>
+                @if (mobileSubmenuOpen[item.label]) {
+                  <div class="mobile-submenu">
+                    @for (child of item.children; track child.label) {
+                      <a
+                        [routerLink]="child.link"
+                        (click)="mobileOpen = false"
+                        class="mobile-submenu-item"
+                      >
+                        {{ child.label }}
+                      </a>
+                    }
+                  </div>
+                }
+              } @else {
+                <a
+                  [routerLink]="item.link"
+                  (click)="mobileOpen = false"
+                  class="mobile-menu-link"
+                >
+                  {{ item.label }}
+                </a>
+              }
+            </div>
           }
 
           <a
@@ -98,10 +124,21 @@ import { NavItem } from '../../models/site.models';
       font-weight: 700;
       font-family: 'Playfair Display', serif;
       margin-right: auto;
+      display: flex;
+      align-items: center;
+      gap: 12px;
 
       span {
         color: var(--gold);
       }
+    }
+
+    .logo-img {
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid var(--border);
     }
 
     .nav-links {
@@ -207,18 +244,74 @@ import { NavItem } from '../../models/site.models';
       padding: 16px 20px;
       background: var(--dark2);
       border-bottom: 1px solid var(--border);
+      max-height: calc(100vh - 70px);
+      overflow-y: auto;
     }
 
-    .mobile-menu a {
+    .mobile-menu-item-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .mobile-menu-parent {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--muted);
+      padding: 10px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+
+      &:hover {
+        color: var(--white);
+        background: rgba(255,255,255,0.05);
+      }
+
+      .chevron {
+        transition: transform 0.2s;
+        display: inline-block;
+        &.open {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    .mobile-submenu {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding-left: 20px;
+      margin: 4px 0 8px;
+      border-left: 1px solid var(--border);
+    }
+
+    .mobile-submenu-item {
+      text-decoration: none;
+      color: var(--muted) !important;
+      padding: 8px 14px !important;
+      font-size: 13px !important;
+      border-radius: 6px;
+
+      &:hover {
+        color: var(--gold) !important;
+        background: rgba(201,168,76,0.08) !important;
+      }
+    }
+
+    .mobile-menu-link {
       text-decoration: none;
       color: var(--muted);
       padding: 10px 14px;
       border-radius: 8px;
-    }
+      font-size: 14px;
+      font-weight: 500;
 
-    .mobile-menu a:hover {
-      color: var(--white);
-      background: rgba(255,255,255,0.05);
+      &:hover {
+        color: var(--white);
+        background: rgba(255,255,255,0.05);
+      }
     }
 
     .mobile-cta {
@@ -227,6 +320,9 @@ import { NavItem } from '../../models/site.models';
       color: var(--dark) !important;
       text-align: center;
       font-weight: 600;
+      padding: 10px 14px;
+      border-radius: 8px;
+      text-decoration: none;
     }
 
     @media (max-width: 900px) {
@@ -243,6 +339,12 @@ import { NavItem } from '../../models/site.models';
       }
     }
 
+    @media (max-width: 480px) {
+      .logo {
+        font-size: 22px;
+      }
+    }
+
     @media (min-width: 901px) {
       .mobile-menu {
         display: none !important;
@@ -256,6 +358,11 @@ export class NavbarComponent {
 
   navItems: NavItem[] = this.siteData.navItems;
   mobileOpen = false;
+  mobileSubmenuOpen: { [key: string]: boolean } = {};
+
+  toggleMobileSubmenu(label: string) {
+    this.mobileSubmenuOpen[label] = !this.mobileSubmenuOpen[label];
+  }
 
   constructor() {
     this.router.events

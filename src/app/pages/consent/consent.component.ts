@@ -487,6 +487,12 @@ import emailjs from '@emailjs/browser';
       .consent-inner { padding: 32px 20px; }
       .form-row { grid-template-columns: 1fr; gap: 0; }
     }
+
+    @media (max-width: 500px) {
+      .consent-hero { padding: 60px 16px 30px; }
+      .consent-body { padding: 20px 12px 60px; }
+      .consent-inner { padding: 24px 16px; }
+    }
   `]
 })
 export class ConsentComponent {
@@ -535,10 +541,10 @@ export class ConsentComponent {
     };
 
     emailjs.send(
-      'service_90kr8gp',
-      'template_0zrwpvy',  // Remember to change this to your new template ID later!
+      'service_8yxrasv',
+      'template_v98tu0l',  // Remember to change this to your new template ID later!
       templateParams,
-      'KIH4S5AuE1lX5KL_7'
+      'NT_Oh41PTt8HSOUvB'
     ).then(
       () => {
         this.submitting.set(false);

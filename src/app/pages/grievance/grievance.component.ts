@@ -22,7 +22,7 @@ import { FooterComponent } from '../../components/footer/footer.component';
           <p>At Uncover Market Edge, we believe in providing the best possible service to our clients. If you have any grievances or complaints regarding our services, please follow the steps below for resolution:</p>
           
           <h3>Step 1: Contact Customer Support</h3>
-          <p>In case of any query, concern, or grievance, you can first reach out to our Customer Support team at <strong>subscriber.edu&#64;uncovermarkets.org</strong> or call us at <strong>+91 7619625303</strong>. We aim to resolve all complaints within 48-72 working hours.</p>
+          <p>In case of any query, concern, or grievance, you can first reach out to our Customer Support team at <strong>support&#64;uncovermarket.com</strong> or call us at <strong>+91 7619625303</strong>. We aim to resolve all complaints within 48-72 working hours.</p>
           
           <h3>Step 2: Compliance Officer</h3>
           <p>If your grievance is not resolved satisfactorily by our support team, you may escalate the matter to our Compliance Officer.</p>

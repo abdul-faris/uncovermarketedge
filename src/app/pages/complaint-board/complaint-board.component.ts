@@ -24,14 +24,14 @@ import { FooterComponent } from '../../components/footer/footer.component';
           <div class="complaint-card">
             <h3>Register a New Complaint</h3>
             <p>To register a complaint, please email us directly with your client ID and the details of your issue. Our team will generate a ticket and get back to you within 24-48 hours.</p>
-            <p><strong>Email:</strong> subscriber.edu&#64;uncovermarkets.org</p>
+            <p><strong>Email:</strong> support&#64;uncovermarket.com</p>
             <p><strong>Phone:</strong> +91 7619625303</p>
           </div>
 
           <h3>Escalation Matrix</h3>
           <p>If your complaint is not resolved within the promised timeframe, you may escalate the matter:</p>
           <ul style="margin-bottom: 16px; padding-left: 20px;">
-            <li><strong>Level 1:</strong> Customer Support (subscriber.edu&#64;uncovermarkets.org)</li>
+            <li><strong>Level 1:</strong> Customer Support (support&#64;uncovermarket.com)</li>
             <li><strong>Level 2:</strong> Compliance Officer (compliance&#64;uncovermarkets.org)</li>
             <li><strong>Level 3:</strong> SEBI SCORES portal (<a href="https://scores.gov.in/" target="_blank" style="color: var(--gold); text-decoration: none;">https://scores.gov.in/</a>)</li>
           </ul>

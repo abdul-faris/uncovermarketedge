@@ -138,6 +138,13 @@ import { SiteDataService } from '../../services/site-data.service';
       .about { padding: 70px 20px; }
       .about-inner { grid-template-columns: 1fr; gap: 40px; }
     }
+
+    @media (max-width: 500px) {
+      .about { padding: 50px 16px; }
+      .about-card { padding: 24px 20px; }
+      .pillar { padding: 12px 14px; gap: 10px; }
+      .disclaimer-box { padding: 16px 20px; margin-top: 30px; }
+    }
   `]
 })
 export class AboutComponent {

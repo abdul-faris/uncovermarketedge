@@ -563,6 +563,21 @@ import { Router } from '@angular/router';
         min-width: 160px;
       }
     }
+
+    @media (max-width: 500px) {
+      .about-hero { padding: 50px 16px 30px; }
+      .core-strengths { padding: 24px 20px; }
+      .strength-item { padding: 12px 14px; gap: 10px; }
+      .disclaimer-section { padding: 40px 16px; }
+      .disclaimer-box { padding: 20px 16px; }
+      .why-choose-us { padding: 50px 16px; }
+      .why-header { margin-bottom: 30px; }
+      .why-grid { gap: 16px; }
+      .why-card { padding: 24px 20px; text-align: left; }
+      .why-icon { font-size: 28px; margin-bottom: 12px; float: left; margin-right: 14px; }
+      .about-cta { padding: 50px 16px; }
+      .cta-buttons a { width: 100%; }
+    }
   `]
 })
 export class AboutComponent {

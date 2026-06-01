@@ -72,6 +72,12 @@ import { Router } from '@angular/router';
     @media (max-width: 900px) {
       .cta-section { padding: 70px 20px; }
     }
+
+    @media (max-width: 500px) {
+      .cta-section { padding: 50px 16px; }
+      .cta-actions { margin-top: 30px; gap: 12px; }
+      .cta-actions a { width: 100%; }
+    }
   `]
 })
 export class CtaComponent {

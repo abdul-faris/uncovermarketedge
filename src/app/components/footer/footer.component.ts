@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SiteDataService } from '../../services/site-data.service';
-import { RouterLink  } from '@angular/router';
+import { RouterLink } from '@angular/router';
 import { Router } from '@angular/router';
 
 @Component({
@@ -13,14 +13,17 @@ import { Router } from '@angular/router';
       <div class="footer-grid">
         <!-- Brand column -->
         <div class="footer-brand">
-          <div class="footer-logo">UncoverMarket<span>Edge</span> Research</div>
+          <div class="footer-logo">
+            <img src="assets/logo.png" alt="Logo" class="footer-logo-img" />
+            UncoverMarket<span>Edge</span> Research
+          </div>
           <p class="footer-desc">
             A SEBI-registered research analyst firm providing specialised market intelligence
             and subscription advisory services across equity, commodity, and derivatives markets.
           </p>
           <div class="footer-contact">
             <div>📍 F-25/57, Greenview Appartments, Sector-3, Rohini, DELHI, NATIONAL CAPITAL TERRITORY OF DELHI, 110085</div>
-            <div><a href="mailto:subscriber.edu@uncovermarkets.org">subscriber.edu&#64;uncovermarkets.org</a></div>
+            <div><a href="mailto:support@uncovermarket.com">support&#64;uncovermarket.com</a></div>
             <div><a href="tel:+917619625303">+91 7619625303</a></div>
           </div>
           <div class="sebi-badge">
@@ -71,8 +74,19 @@ import { Router } from '@angular/router';
       font-weight: 700;
       color: var(--white);
       line-height: 1.2;
+      display: flex;
+      align-items: center;
+      gap: 12px;
 
       span { color: var(--gold); }
+    }
+
+    .footer-logo-img {
+      height: 44px;
+      width: 44px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid var(--border);
     }
 
     .footer-desc {
@@ -153,6 +167,14 @@ import { Router } from '@angular/router';
 
     @media (max-width: 500px) {
       .footer-grid { grid-template-columns: 1fr; }
+      .footer-logo {
+        font-size: clamp(18px, 5.5vw, 24px);
+        gap: 8px;
+      }
+      .footer-logo-img {
+        height: 32px;
+        width: 32px;
+      }
     }
   `]
 })

@@ -140,6 +140,17 @@ import { SiteDataService } from '../../services/site-data.service';
       .why-inner { grid-template-columns: 1fr; gap: 40px; }
       .why-visual { grid-template-columns: 1fr 1fr; }
     }
+
+    @media (max-width: 600px) {
+      .why { padding: 50px 16px; }
+      .why-inner { gap: 30px; }
+      .why-list { margin-top: 24px; gap: 12px; }
+      .why-item { padding: 16px 20px; gap: 12px; }
+      .why-num { font-size: 24px; }
+      .why-visual { grid-template-columns: 1fr; gap: 12px; }
+      .why-stat-card { padding: 20px; }
+      .big { font-size: 32px; }
+    }
   `]
 })
 export class WhyChooseUsComponent {

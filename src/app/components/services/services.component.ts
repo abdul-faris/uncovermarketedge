@@ -141,6 +141,12 @@ import { SiteDataService } from '../../services/site-data.service';
       .services-section { padding: 70px 20px; }
       .header-row { flex-direction: column; align-items: flex-start; }
     }
+
+    @media (max-width: 500px) {
+      .services-section { padding: 50px 16px; }
+      .services-grid { grid-template-columns: 1fr; gap: 16px; }
+      .service-card { padding: 24px; }
+    }
   `]
 })
 export class ServicesComponent {

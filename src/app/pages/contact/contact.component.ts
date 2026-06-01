@@ -50,7 +50,7 @@ import emailjs from '@emailjs/browser';
                   <span class="info-icon">📧</span>
                   <div>
                     <div class="info-title">Email</div>
-                    <a href="mailto:subscriber.edu@uncovermarkets.org" class="info-link">subscriber.edu&#64;uncovermarkets.org</a>
+                    <a href="mailto:support@uncovermarket.com" class="info-link">support&#64;uncovermarket.com</a>
                   </div>
                 </div>
                 <div class="info-entry">
@@ -754,6 +754,15 @@ import emailjs from '@emailjs/browser';
       .form-row { grid-template-columns: 1fr; }
       .faq-section { padding: 60px 20px; }
     }
+
+    @media (max-width: 500px) {
+      .contact-hero { padding: 60px 16px 40px; }
+      .contact-body { padding: 32px 12px; }
+      .contact-form-wrap { padding: 20px 16px; }
+      .faq-section { padding: 40px 12px; }
+      .faq-q { padding: 16px; font-size: 14px; }
+      .faq-a { padding: 0 16px 16px; font-size: 13px; }
+    }
   `]
 })
 export class ContactComponent {
@@ -806,13 +815,13 @@ export class ContactComponent {
 
   form = this.fb.group({
     firstName: ['', Validators.required],
-    lastName:  ['', Validators.required],
-    email:     ['', [Validators.required, Validators.email]],
-    phone:     ['', [Validators.required, Validators.pattern(/^[6-9]\d{9}$/)]],
-    service:   ['', Validators.required],
-    plan:      ['regular'],
-    message:   ['', [Validators.required, Validators.minLength(20), Validators.maxLength(500)]],
-    agreed:    [false, Validators.requiredTrue],
+    lastName: ['', Validators.required],
+    email: ['', [Validators.required, Validators.email]],
+    phone: ['', [Validators.required, Validators.pattern(/^[6-9]\d{9}$/)]],
+    service: ['', Validators.required],
+    plan: ['regular'],
+    message: ['', [Validators.required, Validators.minLength(20), Validators.maxLength(500)]],
+    agreed: [false, Validators.requiredTrue],
   });
 
   isDirty(field: string): boolean {
@@ -820,7 +829,7 @@ export class ContactComponent {
     return ctrl.invalid && (ctrl.dirty || ctrl.touched);
   }
 
-onSubmit(): void {
+  onSubmit(): void {
     this.form.markAllAsTouched();
     if (this.form.invalid) return;
 
@@ -839,10 +848,10 @@ onSubmit(): void {
     };
 
     emailjs.send(
-      'service_90kr8gp',    
-      'template_sd2yrw9',   
+      'service_8yxrasv',
+      'template_oouqera',
       templateParams,
-      'KIH4S5AuE1lX5KL_7'     
+      'NT_Oh41PTt8HSOUvB'
     ).then(
       () => {
         this.submitting.set(false);

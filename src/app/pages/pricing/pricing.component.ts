@@ -518,6 +518,17 @@ interface PricingTier {
       .modal { padding: 28px 20px; }
       .sebi-alert { max-width: 100%; }
     }
+
+    @media (max-width: 480px) {
+      .pricing-hero { padding: 40px 16px 30px; }
+      .pricing-body { padding: 30px 12px 60px; }
+      .pricing-card { padding: 20px 16px; }
+      .price-table { flex-direction: column; }
+      .price-divider { height: 1px; width: 100%; }
+      .price-col { display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; text-align: left; }
+      .price-period { margin-bottom: 0; }
+      .meta-label { min-width: 76px; }
+    }
   `]
 })
 export class PricingComponent implements OnInit {

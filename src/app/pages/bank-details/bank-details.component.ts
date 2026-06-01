@@ -408,16 +408,16 @@ export class BankDetailsComponent {
       bank: '',
       logo: '🏛️',
       color: '#8b1a1a',
-      holderName: 'UNCOVER MARKETS',
-      accountNumber: '9650174842',
-      ifsc: 'KKBK0004601',
-      branch: 'DELHI-PEERAGARHI',
+      holderName: 'Uncover Markets Capital Analytics',
+      accountNumber: '259650174842',
+      ifsc: 'INDB0000145',
+      branch: 'Rohini',
       accountType: 'Current Account'
     }
   ];
 
   upiDetails: UpiDetail[] = [
-    { label: 'Company UPI ID', id: '9650174842um@kotak', app: 'Kotak' },
+    { label: 'Company UPI ID', id: '9650174842-4@ybl', app: 'IndusInd Bank' },
 
   ];
 

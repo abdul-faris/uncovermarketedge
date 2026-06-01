@@ -582,6 +582,15 @@ import { Service } from '../../models/site.models';
       .related-services { padding: 60px 20px; }
       .content-cta { flex-direction: column; }
     }
+
+    @media (max-width: 500px) {
+      .breadcrumb-hero { padding: 40px 12px 30px; }
+      .service-body { padding: 24px 12px 60px; }
+      .service-content { padding: 20px 16px; }
+      .feature-card { padding: 16px 20px; }
+      .related-services { padding: 40px 12px; }
+      .nf-cta-btn { width: 100%; }
+    }
   `]
 })
 export class ServiceDetailComponent implements OnInit {
